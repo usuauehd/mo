@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap");
+
+:root {
+  --primaryColor: #ff274b;
+  --secondaryColor: #f7bcf7;
+  --lightColor: #ffffff;
+  --bgColor-1: #171a1c;
+  --bgColor-2: #22282a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: var(--lightColor);
+  scroll-behavior: smooth;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------HEADER-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+header {
+  width: 100%;
+  min-height: 65px;
+  background-color: var(--bgColor-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  padding: 1rem 5rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primaryColor);
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
+  color: var(--lightColor);
+  transition: 0.5s ease;
+}
+
+ul li a:hover {
+  color: var(--primaryColor);
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------HOME-SECTION-----------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgColor-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.container-text {
+  margin-left: 5rem;
+  font-family: "Playwrite NG Modern", cursive;
+  margin-bottom: 7rem;
+}
+
+.container-text div {
+  margin-bottom: 1.5rem;
+}
+
+.container-text h3 {
+  font-size: 2.7rem;
+  color: var(--secondaryColor);
+}
+
+.container-text h1 {
+  font-size: 4rem;
+}
+
+span {
+  color: var(--primaryColor);
+}
+
+.container-text h4 {
+  font-size: 2.7rem;
+  color: var(--lightColor);
+}
+
+.project-btn {
+  width: 20rem;
+  min-height: 5.5rem;
+  background-color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.project-btn a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--lightColor);
+}
+
+.project-btn:hover {
+  background-color: transparent;
+}
+
+.icons a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--primaryColor);
+}
+
+.icons > a {
+  margin-right: 3rem;
+}
+
+.icons a i {
+  transition: 0.5s ease;
+}
+
+.icons a i:hover {
+  transform: scale(1.2);
+}
+
+.container-img {
+  width: 45%;
+  height: 90%;
+  position: relative;
+  align-self: flex-end;
+  margin-right: 5.5rem;
+}
+
+.container-img img {
+  height: 75%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s ease;
+}
+
+.container-img:hover .shape {
+  bottom: 40px;
+}
+
+.container-img:hover .pic {
+  left: 45%;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------ABOUT-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.about {
+  width: 100%;
+  max-height: 100vh;
+  background-color: var(--bgColor-1);
+}
+
+.about-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-img {
+  width: 45%;
+}
+
+.about-img img {
+  width: 90%;
+}
+
+.about-me {
+  color: var(--lightColor);
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+.title {
+  font-size: 4.5rem;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  color: var(--secondaryColor);
+  letter-spacing: 1px;
+  line-height: 2.5rem;
+  text-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------SERVICES-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.services {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bgColor-2);
+}
+
+.services .title {
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3.2rem;
+}
+/*
+border-radius: 30px;
+background: linear-gradient(225deg, #191c1e, #151719);
+box-shadow:  -11px 11px 22px #141618,
+             11px -11px 22px #1a1e20;
+*/
+
+.card {
+  width: 30rem;
+  text-align: center;
+  background-color: var(--bgColor-1);
+  padding: 1.3rem 2rem;
+  border-radius: 3rem;
+  letter-spacing: 1.1px;
+  transition: 0.5s ease;
+  margin-bottom: 2rem;
+}
+
+.card i {
+  font-size: 8rem;
+  color: var(--primaryColor);
+}
+
+.card h3 {
+  margin-top: 1.3rem;
+  font-size: 2rem;
+  color: var(--lightColor);
+}
+
+.card p {
+  margin-top: 1.3rem;
+  font-size: 1.5rem;
+  color: var(--secondaryColor);
+  line-height: 2.5rem;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background: linear-gradient(225deg, #191c1e, #151719);
+  box-shadow: -11px 11px 22px #141618, 11px -11px 22px #1a1e20;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------SKILL-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.skills {
+  width: 100%;
+  max-height: 100vh;
+  background-color: var(--bgColor-1);
+}
+
+.skills .title {
+  text-align: center;
+  padding: 2.3rem 0;
+}
+
+.container-skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill {
+  width: 495px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills-img {
+  width: 8.5rem;
+  height: 8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--lightColor);
+  margin-left: 1.5rem;
+  margin-top: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.skills-img img {
+  width: 75%;
+  height: 75%;
+}
+
+.skill-img {
+  width: 45%;
+}
+
+.skill-img img {
+  width: 90%;
+}
+
+.skills-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 3px 12px 0px #f7f0f028;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------CONTACT-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+.contact {
+  width: 100%;
+  max-height: 100vh;
+  background-color: var(--bgColor-2);
+  padding: 1.4rem 0 2.2rem 0;
+}
+
+.contact .title {
+  text-align: center;
+}
+
+.contact .box {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .box .card {
+  margin: 0 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------FOOTER-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+footer {
+  width: 100%;
+  min-height: 65px;
+  background-color: var(--bgColor-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+footer p {
+  font-size: 2.5rem;
+}
+
+footer .icons {
+  font-size: 2.5rem;
+}
+
+footer .icons a {
+  margin-right: 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------MENU-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+#menu {
+  display: none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+#menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: var(--lightColor);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.5s ease;
+  margin-bottom: 5px;
+}
+
+#menu.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+#menu.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+#menu.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+#menu.is-active span {
+  background-color: var(--primaryColor);
+}
+/* -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+------------------------------MEDIA-SCREEN-SECTION-----------------------------------------
+-----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+@media screen and (max-width: 430px) {
+  html {
+    font-size: 8px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 82px;
+    background-color: var(--bgColor-1);
+    border-bottom: 1px solid var(--bgColor-2);
+    z-index: 999;
+  }
+
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor-2);
+  }
+
+  nav ul.is-active {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+
+  .container-img {
+    display: none;
+  }
+
+  .container-text div {
+    margin-bottom: 5.5rem;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .about .title {
+    margin-left: 3rem;
+  }
+
+  .about-me p {
+    margin-left: 3rem;
+  }
+
+  .about {
+    padding-bottom: 2rem;
+  }
+
+  .card {
+    margin-bottom: 3rem;
+  }
+
+  .skill-img {
+    display: none;
+  }
+
+  .skill {
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 2rem;
+  }
+
+  .skills-img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .contact .box {
+    gap: 2.5rem;
+  }
+
+  footer {
+    padding: 0 2rem;
+  }
+
+  footer .icons {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+  .container-img {
+    display: none;
+  }
+
+  .container-text div {
+    margin-bottom: 5.5rem;
+  }
+
+  .about-me p {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .skill {
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  footer p {
+    margin-left: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container-img {
+    display: none;
+  }
+
+  .container-text div {
+    margin-bottom: 5.5rem;
+  }
+
+  .about-me p {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .skill {
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  footer p {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 432px) and (max-width: 932px) {
+  html {
+    font-size: 6px;
+  }
+
+  .container-text div {
+    margin-bottom: 1rem;
+  }
+
+  .about-me p {
+    font-size: 2rem;
+    line-height: 4.5rem;
+  }
+}
